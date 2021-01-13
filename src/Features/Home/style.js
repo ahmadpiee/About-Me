@@ -6,7 +6,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-const Radius = 20;
+const Radius = 16;
 
 export const HomeStyle = StyleSheet.create({
   Container: {
@@ -91,17 +91,20 @@ export const HomeStyle = StyleSheet.create({
     borderRadius: 6,
     elevation: 2,
   },
-  firstButton: {
+  ChatButton: {
     backgroundColor: 'white',
   },
-  secondButton: {
+  FollowButton: {
     backgroundColor: '#5374FF',
   },
+  FollowText: {
+    color: 'white',
+  },
   Content: {
-    // backgroundColor: 'red',
     width: wp(88),
     height: hp(32),
-    marginVertical: moderateScale(28),
+    marginHorizontal: moderateScale(28),
+    marginTop: moderateScale(80),
   },
   HeadingTitle: {
     paddingBottom: hp(0.5),
@@ -127,11 +130,46 @@ export const HomeStyle = StyleSheet.create({
     marginBottom: moderateScale(10),
   },
   TitleSlide: {
-    fontSize: 10,
+    fontSize: 12,
     color: 'gray',
+    fontWeight: 'bold',
   },
   SubtitleSlide: {
     fontSize: 16,
+    fontWeight: 'bold',
+  },
+  BottomContainer: {
+    marginHorizontal: moderateScale(28),
+    marginBottom: moderateScale(28),
+    width: wp(88),
+    height: hp(14),
+    justifyContent: 'space-between',
+    backgroundColor: '#6D8B93',
+    borderRadius: Radius,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
+    padding: moderateScale(14),
+  },
+  BottomBox: {
+    borderRadius: 6,
+    backgroundColor: '#3B616A',
+    padding: moderateScale(8),
+    width: wp(28),
+  },
+  BottomTitle: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  BottomContent: {
+    color: 'white',
     fontWeight: 'bold',
   },
 });
