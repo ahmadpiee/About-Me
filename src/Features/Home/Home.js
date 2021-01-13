@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView, Text, View, Image, TouchableOpacity} from 'react-native';
 import {HomeStyle} from './style';
 import {GlobalStyle} from '../../Shared/GlobalStyle/style';
+import FastImage from 'react-native-fast-image';
 
 class Home extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Home extends Component {
   render() {
     return (
       <View style={[HomeStyle.Container]}>
-        <View style={HomeStyle.topContainer}>
+        <View style={HomeStyle.TopContainer}>
           <View style={HomeStyle.HeroContainer}>
             <View style={HomeStyle.HeroProfile}>
               <Image
@@ -41,7 +42,9 @@ class Home extends Component {
               />
               <View style={HomeStyle.HeroDetails}>
                 <View>
-                  <Text style={HomeStyle.HeroName}>Sutiyem Sofyan</Text>
+                  <Text style={HomeStyle.HeroName} numberOfLines={2}>
+                    Joko joko jooko joko joko joko joko joko joko joko
+                  </Text>
                   <Text style={HomeStyle.HeroJob}>Tukang selfie</Text>
                 </View>
                 <View style={HomeStyle.HeroNumber}>
@@ -71,6 +74,69 @@ class Home extends Component {
               </TouchableOpacity>
             </View>
           </View>
+          <View style={HomeStyle.Content}>
+            <View style={HomeStyle.HeadingContent}>
+              <Text style={HomeStyle.HeadingTitle}>Notable works</Text>
+              <Text style={HomeStyle.HeadingSubtitle}>
+                Based on the popularity of the articles
+              </Text>
+            </View>
+            <ScrollView style={HomeStyle.Slide} horizontal>
+              <View style={HomeStyle.SlideItem}>
+                <Image
+                  style={HomeStyle.PhotoSlide}
+                  source={require('../../Assets/Images/tech1.jpg')}
+                />
+                <Text Style={HomeStyle.TitleSlide} numberOfLines={1}>
+                  Technology
+                </Text>
+                <Text Style={HomeStyle.SubtitleSlide} numberOfLines={2}>
+                  We are currently looking for new core contributors that can
+                  help lead this project.
+                </Text>
+              </View>
+              <View style={HomeStyle.SlideItem}>
+                <Image
+                  style={HomeStyle.PhotoSlide}
+                  source={require('../../Assets/Images/tech1.jpg')}
+                />
+                <Text Style={HomeStyle.TitleSlide} numberOfLines={1}>
+                  Technology
+                </Text>
+                <Text Style={HomeStyle.SubtitleSlide} numberOfLines={2}>
+                  We are currently looking for new core contributors that can
+                  help lead this project.
+                </Text>
+              </View>
+              <View style={HomeStyle.SlideItem}>
+                <Image
+                  style={HomeStyle.PhotoSlide}
+                  source={require('../../Assets/Images/tech1.jpg')}
+                />
+                <Text Style={HomeStyle.TitleSlide} numberOfLines={1}>
+                  Technology
+                </Text>
+                <Text Style={HomeStyle.SubtitleSlide} numberOfLines={2}>
+                  We are currently looking for new core contributors that can
+                  help lead this project.
+                </Text>
+              </View>
+              <View style={HomeStyle.SlideItem}>
+                <Image
+                  style={HomeStyle.PhotoSlide}
+                  source={require('../../Assets/Images/tech1.jpg')}
+                />
+                <Text Style={HomeStyle.TitleSlide} numberOfLines={1}>
+                  Technology
+                </Text>
+                <Text Style={HomeStyle.SubtitleSlide} numberOfLines={2}>
+                  We are currently looking for new core contributors that can
+                  help lead this project.
+                </Text>
+              </View>
+            </ScrollView>
+          </View>
+          <View style={HomeStyle.BottomContainer}></View>
         </View>
       </View>
     );
